@@ -1,0 +1,15 @@
+
+use borsh::{BorshDeserialize, BorshSerialize};
+use num_derive::FromPrimitive;
+
+
+
+#[derive(Clone, Debug, PartialEq, BorshDeserialize, BorshSerialize, FromPrimitive)]
+pub enum ProgramInstruction {
+    CreateGame,
+    Participate,
+    Reveal,
+    End,
+    Delete
+}
+
